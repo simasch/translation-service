@@ -13,7 +13,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-public class CountryRestControllerIT {
+public class CountryRestControllerRestTest {
 
     @LocalServerPort
     private int port;
