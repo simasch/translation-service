@@ -1,6 +1,8 @@
 package io.seventytwo.academcy.translationservice.api;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,9 +15,11 @@ import java.util.Locale;
 @RequestMapping("/country")
 public class CountryRestController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(CountryRestController.class);
+
     @GetMapping("/{isocode}")
     public String getCountryName(@PathVariable String isocode) {
-        log.info("getCountryName({})",  isocode);
+        LOGGER.info("getCountryName({})",  isocode);
 
         Locale.setDefault(new Locale("DE", "ch"));
 
